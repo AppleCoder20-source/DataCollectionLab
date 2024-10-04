@@ -6,10 +6,7 @@ const prompt = require ("prompt-sync")({sigint: true})
 let headers1 = "ID, Name, Occupation, Age"; 
 let headerItems1 = headers1.split(","); 
 
-//This line removes whitespaces
-for (let i = 0; i < headerItems1.length; i++) {
-    headerItems1[i] = headerItems1[i].trim();
-}
+
 console.log(headerItems1.join(" | ")); // Output: ID | Name | Occupation | Age
 
 let data1 = `
@@ -56,10 +53,7 @@ for (let i = 1; i < dataLines2.length; i++) {
     let row = dataLines2[i];
     let columns = row.split(","); // Split row into columns
 
-    // Remove Whitespace
-    for (let j = 0; j < columns.length; j++) {
-        columns[j] = columns[j].trim();
-    }
+    
 
     console.log(columns.join(" | "));
 }
@@ -79,10 +73,7 @@ numCols = parseInt(input);
 if (isNaN(numCols) || numCols < 1) {
     numCols = headers.length;
 }
-// Remove Whitespace
-for (let i = 0; i < numCols; i++) {
-    headers[i] = (headers[i] || "").trim();
-}
+
 console.log(headers.slice(0, numCols).join(" | "));
 
 //Display data rows
