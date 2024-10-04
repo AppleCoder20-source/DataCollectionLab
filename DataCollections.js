@@ -5,8 +5,6 @@ const prompt = require ("prompt-sync")({sigint: true})
 // Define headers and split by comma
 let headers1 = "ID, Name, Occupation, Age"; 
 let headerItems1 = headers1.split(","); 
-
-
 console.log(headerItems1.join(" | ")); // Output: ID | Name | Occupation | Age
 
 let data1 = `
@@ -52,9 +50,6 @@ console.log(headers2.join(" | "));
 for (let i = 1; i < dataLines2.length; i++) {
     let row = dataLines2[i];
     let columns = row.split(","); // Split row into columns
-
-    
-
     console.log(columns.join(" | "));
 }
 // Part 2
@@ -73,7 +68,6 @@ numCols = parseInt(input);
 if (isNaN(numCols) || numCols < 1) {
     numCols = headers.length;
 }
-
 console.log(headers.slice(0, numCols).join(" | "));
 
 //Display data rows
@@ -84,10 +78,8 @@ for (let i = 1; i < lines.length; i++) {
     }
     console.log(cols.slice(0, numCols).join(" | "));
 }
-
 //Part 3 
 // Part 3: Transforming Data
-
 // We will use the dataCombined variable from Part 2
 // Split the data into lines
 let dataLines = dataCombined.trim().split("\n");
